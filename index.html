@@ -86,17 +86,22 @@
         }
         
         .profile-img {
-            width: 180px;
-            height: 180px;
+            width: 220px;
+            height: 220px;
             border-radius: 50%;
             border: 6px solid rgba(255, 255, 255, 0.3);
             margin: 0 auto 25px;
-            background-color: white;
             overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            position: relative;
+            background-color: #f5f5f5;
+        }
+        
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             transition: var(--transition);
         }
         
@@ -105,9 +110,8 @@
             border-color: rgba(255, 255, 255, 0.5);
         }
         
-        .profile-img i {
-            font-size: 80px;
-            color: var(--primary-color);
+        .profile-img:hover img {
+            transform: scale(1.05);
         }
         
         h1 {
@@ -508,11 +512,27 @@
             font-size: 1.2rem;
         }
         
-        /* Portfolio */
+        /* Portfolio Section */
+        .portfolio-section {
+            background-color: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+        
+        .portfolio-section:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 30px;
+            margin-top: 30px;
         }
         
         .portfolio-item {
@@ -524,6 +544,7 @@
             height: 100%;
             display: flex;
             flex-direction: column;
+            border: 1px solid var(--border-color);
         }
         
         .portfolio-item:hover {
@@ -575,25 +596,43 @@
             margin-bottom: 10px;
             color: var(--primary-color);
             font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .portfolio-title i {
+            font-size: 1.5rem;
+        }
+        
+        .portfolio-description {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: var(--text-light);
+            flex-grow: 1;
         }
         
         .portfolio-link-btn {
-            margin-top: auto;
-            padding-top: 15px;
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            color: var(--secondary-color);
+            justify-content: center;
+            padding: 12px 24px;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
             font-weight: 600;
-            font-size: 0.95rem;
+            transition: var(--transition);
+            margin-top: auto;
+            border: none;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+            gap: 8px;
         }
         
-        .portfolio-link-btn i {
-            margin-right: 8px;
-            transition: transform 0.3s ease;
-        }
-        
-        .portfolio-link:hover .portfolio-link-btn i {
-            transform: translateX(5px);
+        .portfolio-link-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(44, 93, 140, 0.2);
         }
         
         /* Contact Form */
@@ -751,7 +790,7 @@
                 display: none !important;
             }
             
-            .section {
+            .section, .portfolio-section {
                 box-shadow: none;
                 border: 1px solid #ddd;
             }
@@ -826,7 +865,7 @@
                 font-size: 1.3rem;
             }
             
-            .section {
+            .section, .portfolio-section {
                 padding: 30px 20px;
             }
             
@@ -870,6 +909,22 @@
                 width: 45px;
                 height: 45px;
             }
+            
+            .profile-img {
+                width: 180px;
+                height: 180px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+            
+            h1 {
+                font-size: 1.9rem;
+            }
         }
     </style>
 </head>
@@ -880,7 +935,7 @@
             <div class="header-content">
                 <div class="profile-container">
                     <div class="profile-img">
-                        <i class="fas fa-user-tie"></i>
+                        <img src="https://i.ibb.co/7dmR60YW/FB-IMG-1767128107781.jpg" alt="موسى سري مكرد ناشر العبسي - مدير تسويق رقمي">
                     </div>
                     <h1>موسى سري مكرد ناشر العبسي</h1>
                     <div class="job-title">مدير تسويق رقمي | مدير حملات إعلانية | متداول | مصمم مواقع</div>
@@ -1183,62 +1238,83 @@
         </section>
 
         <!-- Portfolio Section -->
-        <section id="portfolio" class="section">
+        <section id="portfolio" class="portfolio-section">
             <h2 class="section-title"><i class="fas fa-laptop-code"></i> نماذج من الأعمال</h2>
-            <p style="margin-bottom: 30px; font-size: 1.1rem; color: var(--text-light);">
+            <p style="font-size: 1.1rem; line-height: 1.7; color: var(--text-light); margin-bottom: 10px;">
                 تصميم مواقع وصفحات تعريفية (Landing Pages) احترافية لمشاريع التداول والشركات مع التركيز على تجربة المستخدم (UX) وتحقيق أهداف التسويق.
             </p>
             
             <div class="portfolio-grid">
                 <!-- Portfolio Item 1 -->
                 <div class="portfolio-item">
-                    <a href="https://ebsniperfx.arfx.me/" target="_blank" class="portfolio-link">
-                        <div class="portfolio-img">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <div class="portfolio-info">
-                            <h3 class="portfolio-title">EBSniperFX - منصة التداول المتقدمة</h3>
-                            <p style="margin-bottom: 15px;">منصة تداول متخصصة في الفوركس والعملات الرقمية مع أدوات تحليل متقدمة وإشارات تداول دقيقة.</p>
-                            <div class="portfolio-link-btn">
-                                <span>زيارة الموقع</span>
-                                <i class="fas fa-arrow-left"></i>
-                            </div>
-                        </div>
-                    </a>
+                    <div class="portfolio-img">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">
+                            <i class="fas fa-trophy"></i> منصة التداول الاحترافية
+                        </h3>
+                        <p class="portfolio-description">
+                            منصة تداول احترافية مع أدوات تحليل متقدمة وواجهة مستخدم متميزة تهدف إلى تحسين تجربة المتداولين وتحقيق نتائج استثمارية مميزة.
+                        </p>
+                        <a href="https://b-trading.arfx.me/" target="_blank" class="portfolio-link-btn">
+                            <i class="fas fa-external-link-alt"></i> زيارة الموقع
+                        </a>
+                    </div>
                 </div>
                 
                 <!-- Portfolio Item 2 -->
                 <div class="portfolio-item">
-                    <a href="https://b-trading.arfx.me/" target="_blank" class="portfolio-link">
-                        <div class="portfolio-img">
-                            <i class="fas fa-coins"></i>
-                        </div>
-                        <div class="portfolio-info">
-                            <h3 class="portfolio-title">B-Trading - منصة التداول الاحترافية</h3>
-                            <p style="margin-bottom: 15px;">منصة تداول احترافية مع أدوات تحليل متقدمة وواجهة مستخدم متميزة تهدف إلى تحسين تجربة المتداولين.</p>
-                            <div class="portfolio-link-btn">
-                                <span>زيارة الموقع</span>
-                                <i class="fas fa-arrow-left"></i>
-                            </div>
-                        </div>
-                    </a>
+                    <div class="portfolio-img">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">
+                            <i class="fas fa-crosshairs"></i> منصة التداول المتقدمة
+                        </h3>
+                        <p class="portfolio-description">
+                            منصة تداول متخصصة في الفوركس والعملات الرقمية مع أدوات تحليل متقدمة وإشارات تداول دقيقة تساعد المستثمرين على اتخاذ القرارات المناسبة.
+                        </p>
+                        <a href="https://ebsniperfx.arfx.me/" target="_blank" class="portfolio-link-btn">
+                            <i class="fas fa-external-link-alt"></i> زيارة الموقع
+                        </a>
+                    </div>
                 </div>
                 
                 <!-- Portfolio Item 3 -->
                 <div class="portfolio-item">
-                    <a href="https://kero-trade.arfx.me/" target="_blank" class="portfolio-link">
-                        <div class="portfolio-img">
-                            <i class="fas fa-exchange-alt"></i>
-                        </div>
-                        <div class="portfolio-info">
-                            <h3 class="portfolio-title">Kero Trade - إشارات وتحليلات السوق</h3>
-                            <p style="margin-bottom: 15px;">موقع تداول يقدم إشارات وتحليلات للسوق المالي مع أخبار وتوقعات تساعد المتداولين على اتخاذ قرارات مستنيرة.</p>
-                            <div class="portfolio-link-btn">
-                                <span>زيارة الموقع</span>
-                                <i class="fas fa-arrow-left"></i>
-                            </div>
-                        </div>
-                    </a>
+                    <div class="portfolio-img">
+                        <i class="fas fa-signal"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">
+                            <i class="fas fa-chart-bar"></i> إشارات وتحليلات السوق
+                        </h3>
+                        <p class="portfolio-description">
+                            موقع تداول يقدم إشارات وتحليلات للسوق المالي مع أخبار وتوقعات تساعد المتداولين على اتخاذ قرارات مستنيرة وتحقيق أرباح مستدامة.
+                        </p>
+                        <a href="https://kero-trade.arfx.me/" target="_blank" class="portfolio-link-btn">
+                            <i class="fas fa-external-link-alt"></i> زيارة الموقع
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 - الذهب -->
+                <div class="portfolio-item">
+                    <div class="portfolio-img">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">
+                            <i class="fas fa-coins"></i> أسعار الذهب العالمية
+                        </h3>
+                        <p class="portfolio-description">
+                            موقع متخصص في عرض أسعار الذهب بالجرام حسب سعر الأوقية عالمياً، مع تحديث لحظي وآلة حاسبة للتحويل بين الوحدات المختلفة.
+                        </p>
+                        <a href="https://gold.arfx.me/" target="_blank" class="portfolio-link-btn">
+                            <i class="fas fa-external-link-alt"></i> زيارة الموقع
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1409,7 +1485,7 @@
         
         // Highlight active section on scroll
         window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('section');
+            const sections = document.querySelectorAll('section, .portfolio-section');
             const navLinks = document.querySelectorAll('.nav-links a, .mobile-menu a');
             
             let currentSection = '';
@@ -1494,6 +1570,13 @@
         
         // Initialize skill bars animation on page load if already in view
         setTimeout(animateSkillBars, 500);
+        
+        // Image loading error handling
+        document.querySelector('.profile-img img').addEventListener('error', function() {
+            this.onerror = null;
+            this.src = 'https://via.placeholder.com/220x220/2c5d8c/ffffff?text=موسى+سري';
+            console.log('تم تحميل صورة بديلة بسبب خطأ في تحميل الصورة الأصلية');
+        });
     </script>
 </body>
 </html>
