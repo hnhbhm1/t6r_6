@@ -563,11 +563,10 @@
         
         .portfolio-img {
             height: 200px;
-            background: var(--gradient-light);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--primary-color);
+            color: white;
             font-size: 3.5rem;
             position: relative;
             overflow: hidden;
@@ -580,7 +579,7 @@
             right: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(44, 93, 140, 0.1) 0%, rgba(74, 144, 226, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.05) 100%);
         }
         
         .portfolio-info {
@@ -593,7 +592,7 @@
         
         .portfolio-title {
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             color: var(--primary-color);
             font-size: 1.3rem;
             display: flex;
@@ -925,6 +924,14 @@
             h1 {
                 font-size: 1.9rem;
             }
+            
+            .portfolio-title {
+                font-size: 1.2rem;
+            }
+            
+            .portfolio-description {
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
@@ -1245,17 +1252,26 @@
             </p>
             
             <div class="portfolio-grid">
-                <!-- Portfolio Item 1 -->
+                <!-- BARON TRADING -->
                 <div class="portfolio-item">
-                    <div class="portfolio-img">
-                        <i class="fas fa-chart-line"></i>
+                    <div class="portfolio-img" style="background: linear-gradient(135deg, #1a237e 0%, #283593 100%);">
+                        <i class="fas fa-crown"></i>
                     </div>
                     <div class="portfolio-info">
                         <h3 class="portfolio-title">
-                            <i class="fas fa-trophy"></i> منصة التداول الاحترافية
+                            <i class="fas fa-chess-king"></i> BARON TRADING
                         </h3>
                         <p class="portfolio-description">
-                            منصة تداول احترافية مع أدوات تحليل متقدمة وواجهة مستخدم متميزة تهدف إلى تحسين تجربة المتداولين وتحقيق نتائج استثمارية مميزة.
+                            <strong>نظرة عامة:</strong> منصة تعليمية رائدة في التحليل المالي تقدم نظرية Dynamic Flow System الثورية.
+                            <br><br>
+                            <strong>المحتوى الرئيسي:</strong>
+                            • نظام D.F.S الفريد لتحليل الأسواق
+                            • تحليلات يومية دقيقة للأسواق المالية
+                            • محتوى تعليمي مجاني على التليجرام واليوتيوب
+                            • شروحات عملية لتطبيق النظام
+                            • خدمة أكثر من 5,000 متداول عربي
+                            <br><br>
+                            <strong>المميزات:</strong> خبرة تفوق 10 سنوات، محتوى مجاني يومي، منهجية مبتكرة لفهم تدفق السيولة.
                         </p>
                         <a href="https://b-trading.arfx.me/" target="_blank" class="portfolio-link-btn">
                             <i class="fas fa-external-link-alt"></i> زيارة الموقع
@@ -1263,17 +1279,26 @@
                     </div>
                 </div>
                 
-                <!-- Portfolio Item 2 -->
+                <!-- EBSniperFX -->
                 <div class="portfolio-item">
-                    <div class="portfolio-img">
+                    <div class="portfolio-img" style="background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);">
                         <i class="fas fa-bullseye"></i>
                     </div>
                     <div class="portfolio-info">
                         <h3 class="portfolio-title">
-                            <i class="fas fa-crosshairs"></i> منصة التداول المتقدمة
+                            <i class="fas fa-sniper"></i> EBSniperFX
                         </h3>
                         <p class="portfolio-description">
-                            منصة تداول متخصصة في الفوركس والعملات الرقمية مع أدوات تحليل متقدمة وإشارات تداول دقيقة تساعد المستثمرين على اتخاذ القرارات المناسبة.
+                            <strong>نظرة عامة:</strong> موقع خبير التداول إبراهيم أبو حافظ للتعليم والتوصيات الاحترافية.
+                            <br><br>
+                            <strong>المحتوى الرئيسي:</strong>
+                            • دورات تعليمية منظمة للمبتدئين (مرحلتين)
+                            • جروب توصيات VIP حصري
+                            • تحليلات فنية احترافية للفوركس
+                            • دعم متكامل من خلال أفضل البروكرز
+                            • روابط مباشرة لمواد تعليمية
+                            <br><br>
+                            <strong>المميزات:</strong> منهج متدرج (14+ درساً)، دعم 10 بروكرز مختلفين، متابعة شخصية عبر تليجرام.
                         </p>
                         <a href="https://ebsniperfx.arfx.me/" target="_blank" class="portfolio-link-btn">
                             <i class="fas fa-external-link-alt"></i> زيارة الموقع
@@ -1281,17 +1306,26 @@
                     </div>
                 </div>
                 
-                <!-- Portfolio Item 3 -->
+                <!-- Kero Trade -->
                 <div class="portfolio-item">
-                    <div class="portfolio-img">
-                        <i class="fas fa-signal"></i>
+                    <div class="portfolio-img" style="background: linear-gradient(135deg, #00695c 0%, #00897b 100%);">
+                        <i class="fas fa-wave-square"></i>
                     </div>
                     <div class="portfolio-info">
                         <h3 class="portfolio-title">
-                            <i class="fas fa-chart-bar"></i> إشارات وتحليلات السوق
+                            <i class="fas fa-chart-wave"></i> Kero Trade
                         </h3>
                         <p class="portfolio-description">
-                            موقع تداول يقدم إشارات وتحليلات للسوق المالي مع أخبار وتوقعات تساعد المتداولين على اتخاذ قرارات مستنيرة وتحقيق أرباح مستدامة.
+                            <strong>نظرة عامة:</strong> مركز تعليمي متخصص في استراتيجيات التداول الموجي والكلاسيكي المطور.
+                            <br><br>
+                            <strong>المحتوى الرئيسي:</strong>
+                            • كورس Kero Trade المتخصص (8-12 محاضرة)
+                            • استراتيجية الموجي المطور والكلاسيكي المطور
+                            • تحديثات يومية عبر قنوات متعددة
+                            • حماية من انتحال الشخصية
+                            • مجتمع تفاعلي للطلاب
+                            <br><br>
+                            <strong>المميزات:</strong> دورة مكثفة عبر Zoom، تسجيلات دائمة، جروب خاص للطلاب، تركيز على الأمان والحماية.
                         </p>
                         <a href="https://kero-trade.arfx.me/" target="_blank" class="portfolio-link-btn">
                             <i class="fas fa-external-link-alt"></i> زيارة الموقع
@@ -1299,9 +1333,9 @@
                     </div>
                 </div>
                 
-                <!-- Portfolio Item 4 - الذهب -->
+                <!-- أسعار الذهب العالمية -->
                 <div class="portfolio-item">
-                    <div class="portfolio-img">
+                    <div class="portfolio-img" style="background: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%);">
                         <i class="fas fa-gem"></i>
                     </div>
                     <div class="portfolio-info">
@@ -1309,7 +1343,16 @@
                             <i class="fas fa-coins"></i> أسعار الذهب العالمية
                         </h3>
                         <p class="portfolio-description">
-                            موقع متخصص في عرض أسعار الذهب بالجرام حسب سعر الأوقية عالمياً، مع تحديث لحظي وآلة حاسبة للتحويل بين الوحدات المختلفة.
+                            <strong>نظرة عامة:</strong> موقع متخصص لتتبع أسعار الذهب عالمياً مع آلة حاسبة ذكية للتحويل.
+                            <br><br>
+                            <strong>المحتوى الرئيسي:</strong>
+                            • أسعار الذهب المحدثة لحظياً بالأوقية العالمية
+                            • حساب سعر الجرام بعملات متعددة
+                            • محول بين وحدات الذهب المختلفة
+                            • رسوم بيانية لتاريخ الأسعار
+                            • أخبار وتقارير عن سوق الذهب
+                            <br><br>
+                            <strong>المميزات:</strong> تحديث تلقائي، واجهة بسيطة، دقة في الحسابات، مناسب للمستثمرين والصاغة.
                         </p>
                         <a href="https://gold.arfx.me/" target="_blank" class="portfolio-link-btn">
                             <i class="fas fa-external-link-alt"></i> زيارة الموقع
